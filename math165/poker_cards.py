@@ -26,6 +26,9 @@ class Rank(Enum):
     Queen = 12
     King = 13
 
+    def of(self, suit: Suit):
+        return Card(self).of(suit)
+
 
 @dataclass(order=True)
 class Card:
